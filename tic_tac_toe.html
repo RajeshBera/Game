@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="tic_tac_toe.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+<h1 id="pp" align="center"></h1>
+<h1 id="pp1" align="center"></h1>
+<div id="container">
+<div id="point">
+    <p id="rp"><i class="fa fa-users" aria-hidden="true"></i> Red:00</p>
+    <p id="gp"><i class="fa fa-users" aria-hidden="true"></i> Green:00</p>
+</div>
+<abbr title="Let's Enjoy"><img src="tic.jpg" id="img2"></abbr>
+<div align="center">  
+    <h2 id="enjoy">Let's enjoy the Game</h2>
+    
+    <button onclick="sign1()" id="bt1"></button>
+    <button onclick="sign2()" id="bt2"> </button>
+    <button onclick="sign3()" id="bt3"></button><br>
+    <button onclick="sign4()" id="bt4"> </button>
+    <button onclick="sign5()" id="bt5"></button>
+    <button onclick="sign6()" id="bt6"> </button><br>
+    <button onclick="sign7()" id="bt7"></button>
+    <button onclick="sign8()" id="bt8"> </button>
+    <button onclick="sign9()" id="bt9"></button><br><br>
+    <label onclick="reset()" id="reset">Reset</label>
+</div>
+<abbr title="Playing :) Learning"><img src="tic1.jpg" id="img1"></abbr>
+</div>
+<script>
+        
+    var c=1,i=0,s=0;
+    var r1,r2,r3,r4,r5,r6,r7,r8,r9;
+    var g1,g2,g3,g4,g5,g6,g7,g8,g9;
+   var rd=0,gn=0,clr=0,clg=0;
+  
+    function sign1()
+    {
+        if(c==1){
+     document.getElementById('bt1').style.background="red";
+        document.getElementById("bt1").disabled = true;
+         r1=0;
+         c--;
+         clr=clr+1;
+         if(clr>=3){
+         red();}
+        }
+        else{
+            document.getElementById('bt1').style.background="green";
+            document.getElementById("bt1").disabled = true;
+            g1=1;
+            c++;
+            clg=clg+1;
+         if(clg>=3){
+         green();}        }
+       
+    }
+    function sign2()
+    {
+        if(c==0){
+        document.getElementById('bt2').style.background="green";
+        document.getElementById("bt2").disabled = true;
+        g2=1;
+        c++;
+        clg=clg+1;
+         if(clg>=3){
+         green();}        }
+        else{
+            document.getElementById('bt2').style.background="red";
+            document.getElementById("bt2").disabled = true;
+            r2=0;
+           c--;
+           clr=clr+1;
+         if(clr>=3){
+         red();}
+        }
+       
+    }
+    function sign3()
+    {
+        if(c==1){
+        document.getElementById('bt3').style.background="red";
+        document.getElementById("bt3").disabled = true;
+         r3=0;
+         c--;
+         clr=clr+1;
+         if(clr>=3){
+         red();}
+        }
+        else{
+            document.getElementById('bt3').style.background="green";
+            document.getElementById("bt3").disabled = true;
+             g3=1;
+            c++;
+            clg=clg+1;
+         if(clg>=3){
+         green();}        }
+       
+    }
+    function sign4()
+    {
+        if(c==0){
+        document.getElementById('bt4').style.background="green";
+        document.getElementById("bt4").disabled = true;
+         g4=1;
+        c++;
+        clg=clg+1;
+         if(clg>=3){
+         green();}        }
+        else{
+            document.getElementById('bt4').style.background="red";
+            document.getElementById("bt4").disabled = true;
+            r4=0;
+            c--;
+            clr=clr+1;
+         if(clr>=3){
+         red();}
+
+        }
+       
+    }
+    function sign5()
+    {
+        if(c==1){
+        document.getElementById('bt5').style.background="red";
+        document.getElementById("bt5").disabled = true;
+         r5=0;
+         c--;
+         clr=clr+1;
+         if(clr>=3){
+         red();}
+        }
+        else{
+            document.getElementById('bt5').style.background="green";
+            document.getElementById("bt5").disabled = true;
+             g5=1;
+            c++;
+            clg=clg+1;
+         if(clg>=3){
+         green();}
+        }
+       
+    }
+    function sign6()
+    {
+        if(c==0){
+        document.getElementById('bt6').style.background="green";
+        document.getElementById("bt6").disabled = true;
+       g6=1;
+        c++;
+        clg=clg+1;
+         if(clg>=3){
+         green();}
+        }
+        else{
+            document.getElementById('bt6').style.background="red";
+            document.getElementById("bt6").disabled = true;
+          r6=0;
+            c--;
+            clr=clr+1;
+         if(clr>=3){
+         red();}
+        }
+       
+    }
+    function sign7()
+    {
+        if(c==1){
+        document.getElementById('bt7').style.background="red";
+        document.getElementById("bt7").disabled = true;
+        r7=0;
+         c--;
+         clr=clr+1;
+         if(clr>=3){
+         red();}
+        }
+        else{
+            document.getElementById('bt7').style.background="green";
+            document.getElementById("bt7").disabled = true;
+             g7=1;
+            c++;
+            clg=clg+1;
+         if(clg>=3){
+         green();}
+        }
+       
+    }
+    function sign8()
+    {
+        if(c==0){
+        document.getElementById('bt8').style.background="green";
+        document.getElementById("bt8").disabled = true;
+         g8=1;
+        c++;
+        clg=clg+1;
+         if(clg>=3){
+         green();}
+
+        }
+        else{
+            document.getElementById('bt8').style.background="red";
+            document.getElementById("bt8").disabled = true;
+            r8=0;
+            c--;
+            clr=clr+1;
+         if(clr>=3){
+         red();}
+        }
+       
+    }
+    function sign9()
+    {
+        if(c==1){
+        document.getElementById('bt9').style.background="red";
+        document.getElementById("bt9").disabled = true;
+         r9=0;
+         c--;
+         clr=clr+1;
+         if(clr>=3){
+         red();}
+        }
+        else{
+            document.getElementById('bt9').style.background="green";
+            document.getElementById("bt9").disabled = true;
+             g9=1;
+            c++;
+            clg=clg+1;
+         if(clg>=3){
+         green();}
+        }
+    }  
+    //}
+    function red()
+       {
+        if((r1==0&&r2==0&&r3==0)||(r1==0&&r4==0&&r7==0)||(r1==0&&r5==0&&r9==0)||(r2==0&&r5==0&&r8==0)||(r3==0&&r5==0&&r7==0)||(r4==0&&r5==0&&r6==0)||(r7==0&&r8==0&&r9==0)||(r3==0&&r6==0&&r9==0))
+        {
+            rd=rd+1;
+            document.getElementById("rp").innerHTML ="<i class='fa fa-users' aria-hidden='true'></i> Red:0"+rd;
+            s=1;
+            //alert("<<Red Won the Match>>");
+           /* if(1)
+           {*/
+         setTimeout(function() {
+            document.getElementById("pp").style.backgroundImage="url('celeb1.jpg')";
+            document.getElementById("pp").style.marginLeft='37.3%';
+            document.getElementById("pp").style.marginTop='10%';
+             document.getElementById("pp").style.marginRight='37.9%';
+             document.getElementById("pp").style.color='red';
+            document.getElementById("pp").style.webkitTextStroke="1px red";             
+            document.getElementById("pp").style.fontSize='1em';
+            document.getElementById("pp").style.borderRadius='10px';
+            document.getElementById("pp").style.position='Absolute';
+            document.getElementById("pp").style.width='20em';
+            document.getElementById("pp").style.lineHeight='25em';
+            document.getElementById("pp").style.height='15em';
+            document.getElementById("pp").style.fontFamily="Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif";
+            document.getElementById("pp").innerHTML="WohOO..Red Win The Match..";
+            document.getElementById("pp").style.transition=" all ease-in";
+            document.getElementById("pp").style.border='1px red solid';
+            document.getElementById("rp").style.opacity="50%";
+            document.getElementById("gp").style.opacity="50%";
+            document.getElementById("img1").style.opacity="50%";
+            document.getElementById("img2").style.opacity="50%"; 
+            document.getElementById("reset").style.opacity="50%";
+            document.getElementById("enjoy").style.opacity="50%";
+        },900);//}
+              setTimeout(function() {
+                document.getElementById("pp").style.height='0';
+                document.getElementById("pp").style.width='0';
+                document.getElementById("pp").innerHTML="";
+                document.getElementById("pp").style.marginTop="0%";
+                document.getElementById("rp").style.opacity="150%";
+            document.getElementById("gp").style.opacity="150%";
+            document.getElementById("img1").style.opacity="150%";
+            document.getElementById("img2").style.opacity="150%"; 
+            document.getElementById("reset").style.opacity="150%";
+            document.getElementById("enjoy").style.opacity="150%";
+            },2500);
+            document.getElementById("bt1").disabled = true;
+            document.getElementById("bt2").disabled = true;
+            document.getElementById("bt3").disabled = true;
+            document.getElementById("bt4").disabled = true;
+            document.getElementById("bt5").disabled = true;
+            document.getElementById("bt6").disabled = true;
+            document.getElementById("bt7").disabled = true;
+            document.getElementById("bt8").disabled = true;
+            document.getElementById("bt9").disabled = true;
+            setTimeout(function() {
+            document.getElementById("bt1").disabled =false;
+            document.getElementById("bt2").disabled =false;
+            document.getElementById("bt3").disabled =false;
+            document.getElementById("bt4").disabled =false;
+            document.getElementById("bt5").disabled =false;
+            document.getElementById("bt6").disabled =false;
+            document.getElementById("bt7").disabled =false;
+            document.getElementById("bt8").disabled =false;
+            document.getElementById("bt9").disabled =false; 
+            document.getElementById('bt1').style.background="white";
+            document.getElementById('bt2').style.background="white";
+            document.getElementById('bt3').style.background="white";
+            document.getElementById('bt4').style.background="white";
+            document.getElementById('bt5').style.background="white";
+            document.getElementById('bt6').style.background="white";
+            document.getElementById('bt7').style.background="white";
+            document.getElementById('bt8').style.background="white";
+            document.getElementById('bt9').style.background="white";
+            r1=r2=r3=r4=r5=r6=r7=r8=r9=g1=g2=g3=g4=g5=g6=g7=g8=g9=-1;
+            clr=clg=0;},3000);
+            //rd=rd+1;
+            }
+        else if( document.getElementById("bt1").disabled == true&&
+            document.getElementById("bt2").disabled == true&&
+            document.getElementById("bt3").disabled == true&&
+            document.getElementById("bt4").disabled == true&&
+            document.getElementById("bt5").disabled == true&&
+            document.getElementById("bt6").disabled == true&&
+            document.getElementById("bt7").disabled == true&&
+            document.getElementById("bt8").disabled == true&&
+            document.getElementById("bt9").disabled == true)
+            {
+                alert("No one won :( ");
+            setTimeout(function() {
+            document.getElementById("bt1").disabled =false;
+            document.getElementById("bt2").disabled =false;
+            document.getElementById("bt3").disabled =false;
+            document.getElementById("bt4").disabled =false;
+            document.getElementById("bt5").disabled =false;
+            document.getElementById("bt6").disabled =false;
+            document.getElementById("bt7").disabled =false;
+            document.getElementById("bt8").disabled =false;
+            document.getElementById("bt9").disabled =false; 
+            document.getElementById('bt1').style.background="white";
+            document.getElementById('bt2').style.background="white";
+            document.getElementById('bt3').style.background="white";
+            document.getElementById('bt4').style.background="white";
+            document.getElementById('bt5').style.background="white";
+            document.getElementById('bt6').style.background="white";
+            document.getElementById('bt7').style.background="white";
+            document.getElementById('bt8').style.background="white";
+            document.getElementById('bt9').style.background="white";
+            r1=r2=r3=r4=r5=r6=r7=r8=r9=g1=g2=g3=g4=g5=g6=g7=g8=g9=-1;
+            clr=clg=0;},0);
+            }
+       }
+       function green()
+       {
+        if((g1==1&&g2==1&&g3==1)||(g1==1&&g4==1&&g7==1)||(g1==1&&g5==1&&g9==1)||(g2==1&&g5==1&&g8==1)||(g3==1&&g5==1&&g7==1)||(g4==1&&g5==1&&g6==1)||(g7==1&&g8==1&&g9==1)||(g3==1&&g6==1&&g9==1) )
+        {
+            gn=gn+1;
+            //alert('<<Green Won the Match>> ');
+            document.getElementById("gp").innerHTML = "<i class='fa fa-users' aria-hidden='true'></i> Green:0"+gn;
+          //  if(1){
+            setTimeout(function() {
+            document.getElementById("pp1").style.backgroundImage="url('celeb1.jpg')";
+            document.getElementById("pp1").style.marginLeft='37.3%';
+            document.getElementById("pp1").style.marginTop='10%';
+             document.getElementById("pp1").style.marginRight='37.9%';
+            document.getElementById("pp1").style.color='green';
+            document.getElementById("pp1").style.webkitTextStroke="1px green";
+             document.getElementById("pp1").style.fontSize='1em';
+            document.getElementById("pp1").style.borderRadius='10px';
+            document.getElementById("pp1").style.position='Absolute';
+            document.getElementById("pp1").style.width='20em';
+            document.getElementById("pp1").style.lineHeight='25em';
+            document.getElementById("pp1").style.height='15em';
+            document.getElementById("pp1").style.border='1px green solid';
+            document.getElementById("pp1").style.fontFamily="Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif";
+            document.getElementById("pp1").innerHTML="WohOO..Green Win The Match..";
+            document.getElementById("pp1").style.transition=" all ease-in-out";
+           document.getElementById("rp").style.opacity="50%";
+            document.getElementById("gp").style.opacity="50%";
+            document.getElementById("img1").style.opacity="50%";
+            document.getElementById("img2").style.opacity="50%"; 
+            document.getElementById("reset").style.opacity="50%";
+            document.getElementById("enjoy").style.opacity="50%";
+           
+        },900);//}
+        setTimeout(function() {
+        document.getElementById("pp1").style.height='0';
+        document.getElementById("pp1").style.width='0';
+        document.getElementById("pp1").innerHTML="";
+        document.getElementById("pp1").style.marginTop="0%";
+        document.getElementById("rp").style.opacity="150%";
+            document.getElementById("gp").style.opacity="150%";
+            document.getElementById("img1").style.opacity="150%";
+            document.getElementById("img2").style.opacity="150%"; 
+            document.getElementById("reset").style.opacity="150%";
+            document.getElementById("enjoy").style.opacity="150%";  
+            ;
+    },2500);
+           document.getElementById("bt1").disabled = true;
+            document.getElementById("bt2").disabled = true;
+            document.getElementById("bt3").disabled = true;
+            document.getElementById("bt4").disabled = true;
+            document.getElementById("bt5").disabled = true;
+            document.getElementById("bt6").disabled = true;
+            document.getElementById("bt7").disabled = true;
+            document.getElementById("bt8").disabled = true;
+            document.getElementById("bt9").disabled = true;
+            setTimeout(function() {
+            document.getElementById("bt1").disabled =false;
+            document.getElementById("bt2").disabled =false;
+            document.getElementById("bt3").disabled =false;
+            document.getElementById("bt4").disabled =false;
+            document.getElementById("bt5").disabled =false;
+            document.getElementById("bt6").disabled =false;
+            document.getElementById("bt7").disabled =false;
+            document.getElementById("bt8").disabled =false;
+            document.getElementById("bt9").disabled =false; 
+            document.getElementById('bt1').style.background="white";
+            document.getElementById('bt2').style.background="white";
+            document.getElementById('bt3').style.background="white";
+            document.getElementById('bt4').style.background="white";
+            document.getElementById('bt5').style.background="white";
+            document.getElementById('bt6').style.background="white";
+            document.getElementById('bt7').style.background="white";
+            document.getElementById('bt8').style.background="white";
+            document.getElementById('bt9').style.background="white";
+            r1=r2=r3=r4=r5=r6=r7=r8=r9=g1=g2=g3=g4=g5=g6=g7=g8=g9=-1;
+            clr=clg=0;},3000);
+            
+        }
+       else if( document.getElementById("bt1").disabled == true&&
+            document.getElementById("bt2").disabled == true&&
+            document.getElementById("bt3").disabled == true&&
+            document.getElementById("bt4").disabled == true&&
+            document.getElementById("bt5").disabled == true&&
+            document.getElementById("bt6").disabled == true&&
+            document.getElementById("bt7").disabled == true&&
+            document.getElementById("bt8").disabled == true&&
+            document.getElementById("bt9").disabled == true)
+            {
+                alert(" No one won :( ");
+                
+            document.getElementById("bt1").disabled =false;
+            document.getElementById("bt2").disabled =false;
+            document.getElementById("bt3").disabled =false;
+            document.getElementById("bt4").disabled =false;
+            document.getElementById("bt5").disabled =false;
+            document.getElementById("bt6").disabled =false;
+            document.getElementById("bt7").disabled =false;
+            document.getElementById("bt8").disabled =false;
+            document.getElementById("bt9").disabled =false; 
+            document.getElementById('bt1').style.background="white";
+            document.getElementById('bt2').style.background="white";
+            document.getElementById('bt3').style.background="white";
+            document.getElementById('bt4').style.background="white";
+            document.getElementById('bt5').style.background="white";
+            document.getElementById('bt6').style.background="white";
+            document.getElementById('bt7').style.background="white";
+            document.getElementById('bt8').style.background="white";
+            document.getElementById('bt9').style.background="white";
+            r1=r2=r3=r4=r5=r6=r7=r8=r9=g1=g2=g3=g4=g5=g6=g7=g8=g9=-1;
+            clr=clg=0;
+            }
+       }
+       
+       function reset()
+       {
+            document.getElementById("bt1").disabled =false;
+            document.getElementById("bt2").disabled =false;
+            document.getElementById("bt3").disabled =false;
+            document.getElementById("bt4").disabled =false;
+            document.getElementById("bt5").disabled =false;
+            document.getElementById("bt6").disabled =false;
+            document.getElementById("bt7").disabled =false;
+            document.getElementById("bt8").disabled =false;
+            document.getElementById("bt9").disabled =false; 
+            document.getElementById('bt1').style.background="white";
+            document.getElementById('bt2').style.background="white";
+            document.getElementById('bt3').style.background="white";
+            document.getElementById('bt4').style.background="white";
+            document.getElementById('bt5').style.background="white";
+            document.getElementById('bt6').style.background="white";
+            document.getElementById('bt7').style.background="white";
+            document.getElementById('bt8').style.background="white";
+            document.getElementById('bt9').style.background="white";
+            r1=r2=r3=r4=r5=r6=r7=r8=r9=g1=g2=g3=g4=g5=g6=g7=g8=g9=-1;
+            document.getElementById("gp").innerHTML = "<i class='fa fa-users' aria-hidden='true'></i> Green:00";
+            document.getElementById("rp").innerHTML = "<i class='fa fa-users' aria-hidden='true'></i> Red:00";
+            gn=rd=0;
+            clr=clg=0;
+        }  
+       
+       
+</script>
+</html>

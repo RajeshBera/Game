@@ -1,0 +1,162 @@
+
+img{
+    margin-left: 1.3em;
+    width: 20em;
+    display: block;
+    position: absolute;
+    height: 25em;
+    margin-top: 5em;
+}
+img:hover{
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+    
+}
+#img1{
+    margin-left:62em;
+    width: 15em;
+    display: block;
+    position: absolute;
+    height: 24em;
+    margin-top: -15em;
+}
+#img1:hover{
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+
+}
+button{
+height: 10em;
+width: 10em;
+border: rgb(211, 209, 209) 2px solid;
+background-color: white;
+box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+cursor: pointer;
+}
+#bt1
+{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}#bt3
+{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}#bt7
+{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}#bt9
+{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#bt4
+{
+    border-left: 1px solid black;
+}
+#bt6
+{
+    border-right: 1px solid black;
+}
+#bt2
+{
+    border-top: 1px solid black;
+   
+}
+#bt8
+{
+    border-bottom: 1px solid black;
+    
+}
+div{
+    margin-top:3em;
+}
+h2 {
+    border: 1px solid rgb(15, 43, 200);
+    border-radius: 3px;
+    display: block;
+    background: linear-gradient(to left, rgb(36, 63, 212) 50%, rgb(246, 248, 248) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    height: 1.5em;
+    width: 17em;
+    line-height:1.3em;
+    color: white;
+  }
+  
+h2:hover {
+    background-position: left bottom;
+    color:rgb(36, 63, 212);
+    box-shadow:0 4.8px 6.2px rgba(164, 193, 255, 0.979),
+    0 6.7px 5.3px rgb(106, 141, 223);
+    
+  }
+  
+  #point{
+      position: absolute;
+      margin-left:70%;
+  }
+  #rp{
+      border: 2px red solid;
+      color: red;
+      height: 3em;
+      width: 10em;
+      line-height: 3em;
+      padding: 3px;
+      border-radius: 5px;
+      font-weight: 600;
+      
+  }
+  #gp{
+    border: 2px green solid;
+    color: green;
+    height: 3em;
+      width: 10em;
+      line-height: 3em;
+      padding: 3px;
+      border-radius: 5px;
+      font-weight: 600;
+      
+}
+#gp:hover{
+    box-shadow:0 2.8px 2.2px rgba(78, 204, 47, 0.979),
+    0 6.7px 5.3px rgb(159, 228, 102);
+    transition: 0.5s ease-out all;
+    cursor: pointer;
+}
+#rp:hover{
+    
+    box-shadow:0 2.8px 2.2px rgba(241, 101, 101, 0.979),
+    0 6.7px 5.3px rgb(236, 188, 149);
+    transition: 0.5s ease-out all;
+    cursor: pointer;
+}
+label{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    position: absolute;
+    width: 3.3em;
+    margin-left:34%;
+   
+    border: 1px solid rgb(255, 66, 66);
+    display: block;
+    background: linear-gradient(to left, rgb(252, 13, 13) 50%, rgb(255, 255, 255) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    height: 1.5em;
+    width: 17em;
+    line-height:1.3em;
+    cursor: pointer;
+    color:white;
+  }
+  
+label:hover {
+    background-position: left bottom;
+    color:rgb(243, 14, 14); 
+    box-shadow:0 4.8px 6.2px rgba(241, 101, 101, 0.979),
+    0 6.7px 5.3px rgb(223, 85, 51);
+  }
